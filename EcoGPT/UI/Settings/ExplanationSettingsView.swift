@@ -1,31 +1,19 @@
 //
-//  ExplanationView.swift
+//  ExplanationSettingsView.swift
 //  EcoGPT
 //
 //  Created by Alessio Rubicini on 28/04/25.
 //
 
+import Foundation
 import SwiftUI
 
-struct ExplanationView: View {
-    @Binding var isPresented: Bool
-    
+struct ExplanationSettingsView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            HStack {
-                Text("How We Estimate Your Carbon Footprint")
-                    .font(.title2)
-                    .bold()
-                
-                Spacer()
-                
-                Button {
-                    isPresented = false
-                } label: {
-                    Image(systemName: "xmark.circle.fill")
-                }
-
-            }
+            Text("How We Estimate Your Carbon Footprint")
+                .font(.title2)
+                .bold()
             
             VStack(alignment: .leading, spacing: 12) {
                 Text("Footprint Estimation")
@@ -62,10 +50,5 @@ struct ExplanationView: View {
             Spacer()
         }
         .padding()
-        .frame(width: 500, height: 400)
     }
-}
-
-#Preview {
-    ExplanationView(isPresented: .constant(true))
 } 

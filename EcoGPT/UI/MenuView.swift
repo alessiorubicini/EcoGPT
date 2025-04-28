@@ -100,14 +100,9 @@ struct MenuView: View {
             
             
             HStack {
-                Button {
-                    showingExplanation = true
-                } label: {
-                    Image(systemName: "questionmark.circle")
+                SettingsLink {
+                    Image(systemName: "gearshape.fill")
                 }.buttonStyle(.borderless)
-                .sheet(isPresented: $showingExplanation) {
-                    ExplanationView(isPresented: $showingExplanation)
-                }
 
                 Spacer()
                 

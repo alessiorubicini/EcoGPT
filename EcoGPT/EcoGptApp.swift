@@ -12,6 +12,7 @@ struct EcoGptApp: App {
     
     @StateObject private var monitor = AccessibilityMonitor()
     @StateObject private var calculator = FootprintCalculator()
+    @StateObject private var settings = SettingsModel()
     @State private var co2Emissions = "0.0g"
     @State private var selectedModel: GPTModel = .gpt4
     @State private var selectedIntensity: EmissionIntensity = .realistic
@@ -40,6 +41,10 @@ struct EcoGptApp: App {
                 updateImpact(for: text)
             }
         })
+        
+        Settings {
+            SettingsView()
+        }
     }
     
     private func updateImpact(for text: String) {
