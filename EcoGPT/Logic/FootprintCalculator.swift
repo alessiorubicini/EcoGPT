@@ -15,11 +15,11 @@ class FootprintCalculator: ObservableObject {
     /// Energy consumption baseline per 1000 tokens for GPT-3, in kWh.
     private let baseEnergyConsumptionPerThousandTokens = 0.0002
 
-    /// Average tokens per character.
-    private let averageTokensPerCharacter = 0.25
-
     /// Assumed error margin (±20%).
     private let errorMarginPercent = 0.20
+    
+    /// The BPE tokenizer instance
+    private let tokenizer = BPETokenizer()
 
     // MARK: - Public Method
 
@@ -31,11 +31,11 @@ class FootprintCalculator: ObservableObject {
     ///   - emissionIntensity: The emission intensity setting (realistic or conservative).
     /// - Returns: FootprintEstimate struct containing central, lower, and upper bounds.
     func calculateFootprint(for prompt: String, model: GPTModel, emissionIntensity: EmissionIntensity) -> FootprintEstimate {
-        // Step 1: Estimate number of tokens
-        let estimatedTokens = estimateTokens(from: prompt)
+        // Step 1: Count actual tokens using BPE tokenizer
+        let tokenCount = tokenizer.countTokens(prompt)
 
         // Step 2: Estimate energy usage
-        let energyUsedKWh = estimateEnergyUsage(tokens: estimatedTokens, model: model)
+        let energyUsedKWh = estimateEnergyUsage(tokens: tokenCount, model: model)
 
         // Step 3: Convert energy usage to CO₂ emissions
         let centralEmissions = energyUsedKWh * emissionIntensity.gramsCO2PerKWh
@@ -52,12 +52,6 @@ class FootprintCalculator: ObservableObject {
     }
 
     // MARK: - Private Helper Methods
-
-    /// Estimates the number of tokens based on input text length.
-    private func estimateTokens(from text: String) -> Int {
-        let characterCount = text.count
-        return Int(Double(characterCount) * averageTokensPerCharacter)
-    }
 
     /// Estimates the energy usage based on tokens and model type.
     private func estimateEnergyUsage(tokens: Int, model: GPTModel) -> Double {
@@ -90,5 +84,4 @@ class FootprintCalculator: ObservableObject {
             return "Electricity for 1 hour of room lighting with an incandescent bulb"
         }
     }
-
 }
