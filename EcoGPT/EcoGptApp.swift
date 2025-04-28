@@ -49,7 +49,7 @@ struct EcoGptApp: App {
             emissionIntensity: selectedIntensity
         )
         
-        // Update the CO2 display
+        // Update the CO₂ display
         if estimate.representativeValue < 0.01 {
             let mg = estimate.representativeValue * 1000
             co2Emissions = String(format: "%.1fmg", mg)

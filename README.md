@@ -24,9 +24,9 @@ EcoGPT is a macOS menu bar application that helps users track and understand the
 
 1. EcoGPT will appear in your menu bar
 2. The icon color indicates the environmental impact of your current session:
-   - 🟢 Green: Low impact (< 0.1g CO2)
-   - 🟡 Yellow: Moderate impact (0.1g - 0.5g CO2)
-   - 🔴 Red: High impact (> 0.5g CO2)
+   - 🟢 Green: Low impact (< 0.1g CO₂)
+   - 🟡 Yellow: Moderate impact (0.1g - 0.5g CO₂)
+   - 🔴 Red: High impact (> 0.5g CO₂)
 3. Click the menu bar icon to view detailed statistics and settings
 
 ## Contributing

@@ -12,6 +12,7 @@ class AccessibilityMonitor: NSObject, ObservableObject {
     private var observer: AXObserver?
     private var monitoredAppPID: pid_t?
     @Published var lastCapturedText: String?
+    @Published var isChatGPTActive: Bool = false
     
     override init() {
         super.init()
@@ -43,8 +44,10 @@ class AccessibilityMonitor: NSObject, ObservableObject {
     private func checkFocusedApp() {
         guard let app = NSWorkspace.shared.frontmostApplication,
               app.localizedName == "ChatGPT" else {
+            isChatGPTActive = false
             return
         }
+        isChatGPTActive = true
         startObservingTextInput(for: app)
     }
 
