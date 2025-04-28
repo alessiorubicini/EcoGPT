@@ -12,7 +12,6 @@ struct EcoGptApp: App {
     
     @StateObject private var monitor = AccessibilityMonitor()
     @StateObject private var calculator = FootprintCalculator()
-    @State private var iconColor = Color.green
     @State private var co2Emissions = "0.0g"
     @State private var selectedModel: GPTModel = .gpt4
     @State private var selectedIntensity: EmissionIntensity = .realistic
@@ -23,7 +22,6 @@ struct EcoGptApp: App {
             MenuView(
                 monitor: monitor,
                 calculator: calculator,
-                iconColor: $iconColor,
                 co2Emissions: $co2Emissions,
                 selectedModel: $selectedModel,
                 selectedIntensity: $selectedIntensity,
@@ -31,9 +29,8 @@ struct EcoGptApp: App {
             )
         } label: {
             HStack(spacing: 4) {
-                Image(systemName: "leaf.fill")
-                    .foregroundColor(iconColor)
-                Text("\(co2Emissions) CO2")
+                Image(systemName: "carbon.dioxide.cloud")
+                Text("\(co2Emissions)")
                     .font(.system(size: 11))
             }
         }
@@ -58,15 +55,6 @@ struct EcoGptApp: App {
             co2Emissions = String(format: "%.1fmg", mg)
         } else {
             co2Emissions = String(format: "%.2fg", estimate.representativeValue)
-        }
-        
-        // Update icon color based on emissions
-        if estimate.representativeValue < 0.1 {
-            iconColor = .green
-        } else if estimate.representativeValue < 0.5 {
-            iconColor = .yellow
-        } else {
-            iconColor = .red
         }
         
         // Update equivalent impact

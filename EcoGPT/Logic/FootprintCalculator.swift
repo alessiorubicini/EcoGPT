@@ -1,6 +1,6 @@
 //
 //  FootprintCalculator.swift
-//  AIcology
+//  EcoGPT
 //
 //  Created by Alessio Rubicini on 28/04/25.
 //

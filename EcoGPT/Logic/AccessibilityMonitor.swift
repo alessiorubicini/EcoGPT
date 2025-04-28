@@ -1,10 +1,9 @@
 //
 //  AccessibilityMonitor.swift
-//  AIcology
+//  EcoGPT
 //
 //  Created by Alessio Rubicini on 26/04/25.
 //
-
 
 import Cocoa
 
@@ -107,7 +106,6 @@ class AccessibilityMonitor: NSObject, ObservableObject {
             let result = AXUIElementCopyAttributeValue(element, kAXValueAttribute as CFString, &value)
             
             if result == .success, let textValue = value as? String {
-                //print("Captured text")
                 lastCapturedText = textValue
             } else {
                 print("Failed to capture text value.")

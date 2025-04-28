@@ -1,3 +1,10 @@
+//
+//  MenuView.swift
+//  EcoGPT
+//
+//  Created by Alessio Rubicini on 28/04/25.
+//
+
 import SwiftUI
 
 struct MenuView: View {
@@ -5,7 +12,7 @@ struct MenuView: View {
     @ObservedObject var monitor: AccessibilityMonitor
     @ObservedObject var calculator: FootprintCalculator
     
-    @Binding var iconColor: Color
+    @State private var iconColor: Color = .green
     @Binding var co2Emissions: String
     @Binding var selectedModel: GPTModel
     @Binding var selectedIntensity: EmissionIntensity
@@ -18,17 +25,17 @@ struct MenuView: View {
         VStack(alignment: .leading, spacing: 12) {
             // Status indicator
             HStack {
-                Circle()
-                    .fill(iconColor)
-                    .frame(width: 20, height: 20)
-                
                 Text("Estimated Impact")
-                    .font(.headline)
+                    //.font(.headline)
                 
                 Spacer()
                 
                 Text("\(co2Emissions) CO2")
                     .font(.headline)
+                
+                Circle()
+                    .fill(iconColor)
+                    .frame(width: 20, height: 20)
             }
             
             // Uncertainty interval
@@ -122,7 +129,6 @@ struct MenuView: View {
     MenuView(
         monitor: AccessibilityMonitor(),
         calculator: FootprintCalculator(),
-        iconColor: .constant(.green),
         co2Emissions: .constant("0.0g"),
         selectedModel: .constant(.gpt4),
         selectedIntensity: .constant(.realistic),
