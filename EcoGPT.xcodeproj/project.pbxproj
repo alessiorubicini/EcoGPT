@@ -6,14 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CFD9B8F02DBF8AAF006351E6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CFD9B8EF2DBF8AAF006351E6 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		CF1100B42DBD768B00B72702 /* AIcology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIcology.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1100B42DBD768B00B72702 /* EcoGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFD9B8EF2DBF8AAF006351E6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		CF1100B62DBD768B00B72702 /* AIcology */ = {
+		CF1100B62DBD768B00B72702 /* EcoGPT */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = AIcology;
+			path = EcoGPT;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +37,8 @@
 		CF1100AB2DBD768A00B72702 = {
 			isa = PBXGroup;
 			children = (
-				CF1100B62DBD768B00B72702 /* AIcology */,
+				CFD9B8EF2DBF8AAF006351E6 /* README.md */,
+				CF1100B62DBD768B00B72702 /* EcoGPT */,
 				CF1100B52DBD768B00B72702 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +46,7 @@
 		CF1100B52DBD768B00B72702 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF1100B42DBD768B00B72702 /* AIcology.app */,
+				CF1100B42DBD768B00B72702 /* EcoGPT.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +54,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CF1100B32DBD768B00B72702 /* AIcology */ = {
+		CF1100B32DBD768B00B72702 /* EcoGPT */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF1100C02DBD768C00B72702 /* Build configuration list for PBXNativeTarget "AIcology" */;
+			buildConfigurationList = CF1100C02DBD768C00B72702 /* Build configuration list for PBXNativeTarget "EcoGPT" */;
 			buildPhases = (
 				CF1100B02DBD768B00B72702 /* Sources */,
 				CF1100B12DBD768B00B72702 /* Frameworks */,
@@ -61,13 +67,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				CF1100B62DBD768B00B72702 /* AIcology */,
+				CF1100B62DBD768B00B72702 /* EcoGPT */,
 			);
-			name = AIcology;
+			name = EcoGPT;
 			packageProductDependencies = (
 			);
 			productName = AIcology;
-			productReference = CF1100B42DBD768B00B72702 /* AIcology.app */;
+			productReference = CF1100B42DBD768B00B72702 /* EcoGPT.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +91,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CF1100AF2DBD768A00B72702 /* Build configuration list for PBXProject "AIcology" */;
+			buildConfigurationList = CF1100AF2DBD768A00B72702 /* Build configuration list for PBXProject "EcoGPT" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +105,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CF1100B32DBD768B00B72702 /* AIcology */,
+				CF1100B32DBD768B00B72702 /* EcoGPT */,
 			);
 		};
 /* End PBXProject section */
@@ -109,6 +115,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFD9B8F02DBF8AAF006351E6 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +257,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = AIcology/AIcology.entitlements;
+				CODE_SIGN_ENTITLEMENTS = EcoGPT/EcoGPT.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -258,13 +265,14 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = alessiorubicini.dev.AIcology;
+				PRODUCT_BUNDLE_IDENTIFIER = alessiorubicini.dev.ecogpt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -277,7 +285,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = AIcology/AIcology.entitlements;
+				CODE_SIGN_ENTITLEMENTS = EcoGPT/EcoGPT.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -285,13 +293,14 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = alessiorubicini.dev.AIcology;
+				PRODUCT_BUNDLE_IDENTIFIER = alessiorubicini.dev.ecogpt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -302,7 +311,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CF1100AF2DBD768A00B72702 /* Build configuration list for PBXProject "AIcology" */ = {
+		CF1100AF2DBD768A00B72702 /* Build configuration list for PBXProject "EcoGPT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF1100BE2DBD768C00B72702 /* Debug */,
@@ -311,7 +320,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF1100C02DBD768C00B72702 /* Build configuration list for PBXNativeTarget "AIcology" */ = {
+		CF1100C02DBD768C00B72702 /* Build configuration list for PBXNativeTarget "EcoGPT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF1100C12DBD768C00B72702 /* Debug */,
