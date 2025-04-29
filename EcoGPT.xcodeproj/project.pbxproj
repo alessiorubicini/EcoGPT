@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CFB7F4312DC0B3B100789862 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CFB7F4302DC0B3B100789862 /* LICENSE */; };
 		CFD9B8F02DBF8AAF006351E6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CFD9B8EF2DBF8AAF006351E6 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF1100B42DBD768B00B72702 /* EcoGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB7F4302DC0B3B100789862 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CFB7F4352DC0B47500789862 /* ecogpt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ecogpt.png; sourceTree = "<group>"; };
+		CFB7F4362DC0B47500789862 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		CFD9B8EF2DBF8AAF006351E6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,6 +41,8 @@
 		CF1100AB2DBD768A00B72702 = {
 			isa = PBXGroup;
 			children = (
+				CFB7F4342DC0B46000789862 /* Resources */,
+				CFB7F4302DC0B3B100789862 /* LICENSE */,
 				CFD9B8EF2DBF8AAF006351E6 /* README.md */,
 				CF1100B62DBD768B00B72702 /* EcoGPT */,
 				CF1100B52DBD768B00B72702 /* Products */,
@@ -49,6 +55,15 @@
 				CF1100B42DBD768B00B72702 /* EcoGPT.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CFB7F4342DC0B46000789862 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CFB7F4352DC0B47500789862 /* ecogpt.png */,
+				CFB7F4362DC0B47500789862 /* icon.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB7F4312DC0B3B100789862 /* LICENSE in Resources */,
 				CFD9B8F02DBF8AAF006351E6 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

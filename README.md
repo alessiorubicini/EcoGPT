@@ -1,8 +1,13 @@
-# EcoGPT
-
-EcoGPT is a macOS menu bar application that helps users track and understand the environmental impact of their ChatGPT usage. By monitoring your prompts in real-time, EcoGPT provides immediate feedback on the carbon footprint of your AI interactions.
+<div align="center">
+  <img width="300" height="300" src="/Resources/icon.png" alt="Package Logo">
+  <h1><b>EcoGPT</b></h1>
+  <p>
+    EcoGPT is a macOS menu bar application that helps users track and understand the environmental impact of their ChatGPT usage. By monitoring your prompts in real-time, EcoGPT provides immediate feedback on the carbon footprint of your AI interactions.
 
 *Inspired by the need for more sustainable AI usage.*
+    <br>
+  </p>
+</div>
 
 ## Features
 
@@ -13,12 +18,8 @@ EcoGPT is a macOS menu bar application that helps users track and understand the
 - 🌍 Realistic emission intensity calculations
 - 📝 Equivalent impact comparisons (e.g., "Sending a simple email")
 
-## Installation
-
-1. Download the latest release from the [releases page](https://github.com/yourusername/ecogpt/releases)
-2. Drag EcoGPT to your Applications folder
-3. Launch the application
-4. Grant necessary permissions when prompted
+## Screenshot
+![EcoGPT Application](./Resources/ecogpt.png)
 
 ## How Carbon Footprint is Estimated 🌱
 
